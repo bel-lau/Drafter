@@ -1,18 +1,4 @@
-Mirana:
-  name: Mirana
-  pos:
-    one: true
-    two: true
-    three: true
-    four: false
-    five: false
-  pick:
-    one: true
-    two: true
-    three: true
-    four: true
-    five: true
-  ban:
-    first_phase: false
-    second_phase: true
-    third_phase: true
+name: Mirana
+pos: [1, 2, 3]
+pick: [2, 3, 4, 5]
+ban_phase: [2, 3]

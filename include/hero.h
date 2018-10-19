@@ -18,6 +18,10 @@ class Hero
 
     ~Hero();
 
+    std::string getName() const;
+
+    void setName(std::string name);
+    void setPos(int pos, bool status);
 };
 
 #endif //DRAFTER_HERO_H
