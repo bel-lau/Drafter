@@ -1,0 +1,4 @@
+name: Spectre
+pos: [1]
+pick: [3, 4, 5]
+ban_phase: [1, 2, 3]

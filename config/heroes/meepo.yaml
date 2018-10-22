@@ -1,0 +1,4 @@
+name: Meepo
+pos: [2]
+pick: [4, 5]
+ban_phase: [1, 2, 3]

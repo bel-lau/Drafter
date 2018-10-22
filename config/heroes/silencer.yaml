@@ -1,0 +1,4 @@
+name: Silencer
+pos: [2, 4, 5]
+pick: [1, 2, 3, 4, 5]
+ban_phase: [1, 2, 3]

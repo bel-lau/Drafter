@@ -1,6 +1,12 @@
-number_of_heroes: 4
+number_of_heroes: 10
 heroes:
   - mirana
   - shadow_shaman
   - axe
   - antimage
+  - centaur_warrunner
+  - earth_shaker
+  - meepo
+  - silencer
+  - winter_wyvern
+  - spectre
