@@ -1,17 +1,24 @@
+SDIR = src
+IDIR = include
+ODIR = obj
+
 CXX=g++
-CFLAGS=-I./include
+CFLAGS = -Wall -I./$(IDIR)
 
+LIBS=-lyaml-cpp
 
-default: drafter
+_DEPS = drafter_module.h hero.h yaml_convert.h
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+_OBJS = main.o drafter_module.o hero.o
+OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
 
-run: drafter
-	./drafter
+$(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CFLAGS)
 
-gdb: drafter
-	gdb --args drafter
+drafter: $(OBJS)
+	$(CXX) -g -O0 -o $@ $^ $(CFLAGS) $(LIBS)
 
-drafter: src/main.cpp
-	$(CXX) -g -O0 -o drafter -I/home/lbell/Drafter/include src/main.cpp -lyaml-cpp
+.PHONY: clean
 
 clean: 
-	rm -f drafter
+	rm -f drafter $(ODIR)/*.o

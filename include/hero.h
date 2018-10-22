@@ -19,9 +19,12 @@ class Hero
     ~Hero();
 
     std::string getName() const;
+    bool isPos(int pos);
 
     void setName(std::string name);
     void setPos(int pos, bool status);
+    void setPick(int pick, bool status);
+    void setBan(int ban, bool status);
 };
 
 #endif //DRAFTER_HERO_H
